@@ -1,4 +1,6 @@
 "use client";
+import Accordian from "@/components/Accordian";
+import Datafetching from "@/components/Api-fetch-pagination";
 import { ConditionDropdown } from "@/components/ConditionDropdown";
 import { Dropdown } from "@/components/Dropdown";
 import File from "@/components/File";
@@ -16,6 +18,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { title } from "process";
 
 const content = [
   {
@@ -53,13 +56,24 @@ const content = [
     description: "Progress Bar",
     component: <ProgrssBar />,
   },
+  {
+    title: "API Fetch Pagination",
+    description: "API Fetch Pagination",
+    component: <Datafetching />,
+  },
+  {
+    title: "Accordian",
+    description: "Accordian",
+    component: <Accordian defaultOpenIndex={1} />,
+    //component: <Accordian />,
+  },
 ];
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-start gap-y-12 p-20 bg-lime-200/60  text-3xl font-medium tracking-tight">
       <h1>WELCOME</h1>
-      <div className=" w-max flex items-center justify-center gap-x-4 ">
+      <div className=" w-max flex flex-wrap items-center justify-center gap-4 ">
         {content.map((item, index) => (
           <Drawer key={index}>
             <div className=" w-max flex items-center justify-between">

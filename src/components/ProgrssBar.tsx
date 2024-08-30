@@ -52,7 +52,7 @@ const ProgressBar = () => {
   };
 
   return (
-    <div className="w-96 h-96 border-2 border-gray-800 rounded-lg bg-gray-200 flex flex-col items-center justify-start p-4">
+    <div className="w-96 min-h-96 h-max border-2 border-gray-800 rounded-lg bg-gray-200 flex flex-col items-center justify-start p-4">
       <span className="text-xl font-bold">{steps[currentStep].title}</span>
       <p className="text-base">{steps[currentStep].describe}</p>
       <div className="w-full flex items-center justify-between px-2 mt-4">
