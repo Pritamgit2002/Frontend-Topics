@@ -1,6 +1,7 @@
 "use client";
 import Accordian from "@/components/Accordian";
 import Datafetching from "@/components/Api-fetch-pagination";
+import BasicForm from "@/components/Basic-form";
 import { ConditionDropdown } from "@/components/ConditionDropdown";
 import DigitalClock from "@/components/Digital-clock";
 import { Dropdown } from "@/components/Dropdown";
@@ -72,6 +73,11 @@ const content = [
     title: "Digital Clock",
     description: "Digital Clock",
     component: <DigitalClock />,
+  },
+  {
+    title: "Basic Form",
+    description: "Basic Form",
+    component: <BasicForm />,
   },
 ];
 
