@@ -2,6 +2,7 @@
 import Accordian from "@/components/Accordian";
 import Datafetching from "@/components/Api-fetch-pagination";
 import { ConditionDropdown } from "@/components/ConditionDropdown";
+import DigitalClock from "@/components/Digital-clock";
 import { Dropdown } from "@/components/Dropdown";
 import File from "@/components/File";
 import MortgageCalculator from "@/components/MortgageCalculator";
@@ -67,13 +68,18 @@ const content = [
     component: <Accordian defaultOpenIndex={1} />,
     //component: <Accordian />,
   },
+  {
+    title: "Digital Clock",
+    description: "Digital Clock",
+    component: <DigitalClock />,
+  },
 ];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-start gap-y-12 p-20 bg-lime-200/60  text-3xl font-medium tracking-tight">
+    <main className=" w-full h-screen flex flex-col items-center justify-start gap-y-12 p-20 bg-lime-200/60  text-3xl font-medium tracking-tight">
       <h1>WELCOME</h1>
-      <div className=" w-max flex flex-wrap items-center justify-center gap-4 ">
+      <div className=" w-full flex flex-wrap items-center justify-center gap-4 ">
         {content.map((item, index) => (
           <Drawer key={index}>
             <div className=" w-max flex items-center justify-between">
