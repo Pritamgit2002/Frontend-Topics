@@ -2,12 +2,14 @@
 import Accordian from "@/components/Accordian";
 import Datafetching from "@/components/Api-fetch-pagination";
 import BasicForm from "@/components/Basic-form";
+import Carousal from "@/components/Carousal";
 import { ConditionDropdown } from "@/components/ConditionDropdown";
 import DigitalClock from "@/components/Digital-clock";
 import { Dropdown } from "@/components/Dropdown";
 import File from "@/components/File";
 import MortgageCalculator from "@/components/MortgageCalculator";
 import ProgrssBar from "@/components/ProgrssBar";
+import Rainbow from "@/components/Rainbow";
 import Tab from "@/components/Tab";
 import Todo from "@/components/Todo";
 import {
@@ -78,6 +80,16 @@ const content = [
     title: "Basic Form",
     description: "Basic Form",
     component: <BasicForm />,
+  },
+  {
+    title: "Rainbow",
+    description: "Rainbow",
+    component: <Rainbow />,
+  },
+  {
+    title: "Carousal",
+    description: "Carousal",
+    component: <Carousal />,
   },
 ];
 
