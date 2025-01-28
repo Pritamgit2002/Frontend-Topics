@@ -6,11 +6,15 @@ import Carousal from "@/components/Carousal";
 import { ConditionDropdown } from "@/components/ConditionDropdown";
 import DigitalClock from "@/components/Digital-clock";
 import { Dropdown } from "@/components/Dropdown";
+import { Fetchme } from "@/components/fetchme";
 import File from "@/components/File";
+import InputAction from "@/components/InputAction";
 import MortgageCalculator from "@/components/MortgageCalculator";
 import ProgrssBar from "@/components/ProgrssBar";
 import Rainbow from "@/components/Rainbow";
+import { Stopwatch } from "@/components/stopwatch";
 import Tab from "@/components/Tab";
+import Timer from "@/components/timer";
 import Todo from "@/components/Todo";
 import {
   Drawer,
@@ -91,6 +95,26 @@ const content = [
     description: "Carousal",
     component: <Carousal />,
   },
+  {
+    title: "Input Action",
+    description: "Input Action",
+    component: <InputAction />,
+  },
+  {
+    title: "API",
+    description: "API Fetch Pagination",
+    component: <Fetchme/>
+  },
+  {
+    title: "Timer",
+    description: "Timer",
+    component: <Timer/>
+  },
+  {
+    title: "Stopwatch",
+    description: "Stop Watch",
+    component: <Stopwatch/>
+  }
 ];
 
 export default function Home() {

@@ -33,10 +33,6 @@ const Datafetching = () => {
   useEffect(() => {
     const fetchJobStories = async () => {
       try {
-        // const response = await fetch(
-        //   "https://hacker-news.firebaseio.com/v0/jobstories.json"
-        // );
-        // const jobIds: number[] = await response.json();
         const startIndex = (currentPage - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
         const slicedJobIds = jobIds.slice(startIndex, endIndex);
