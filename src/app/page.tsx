@@ -1,13 +1,16 @@
 "use client";
 import Accordian from "@/components/Accordian";
 import Datafetching from "@/components/Api-fetch-pagination";
+import { Aritra } from "@/components/Aritra";
 import BasicForm from "@/components/Basic-form";
 import Carousal from "@/components/Carousal";
 import { ConditionDropdown } from "@/components/ConditionDropdown";
+import Debouncing from "@/components/debouncing";
 import DigitalClock from "@/components/Digital-clock";
 import { Dropdown } from "@/components/Dropdown";
 import { Fetchme } from "@/components/fetchme";
 import File from "@/components/File";
+import { HookCounter } from "@/components/Hook-Counter";
 import InputAction from "@/components/InputAction";
 import MortgageCalculator from "@/components/MortgageCalculator";
 import ProgrssBar from "@/components/ProgrssBar";
@@ -16,6 +19,7 @@ import { Stopwatch } from "@/components/stopwatch";
 import Tab from "@/components/Tab";
 import Timer from "@/components/timer";
 import Todo from "@/components/Todo";
+import Togglemode from "@/components/toggle-mode";
 import {
   Drawer,
   DrawerClose,
@@ -114,6 +118,24 @@ const content = [
     title: "Stopwatch",
     description: "Stop Watch",
     component: <Stopwatch/>
+  },
+  {
+    title: "Aritra",
+    description: "Aritra",
+    component: <Aritra/>
+  },
+  {
+    title: "Toggle",
+    description: "Toggle also stored in localstorage",
+    component:<Togglemode/>
+  },{
+    title: "Counter",
+    description: "Counter by hooks",
+    component:<HookCounter/>
+  },{
+    title:"Debouncing",
+    description:"method of debouncing",
+    component:<Debouncing/>
   }
 ];
 
