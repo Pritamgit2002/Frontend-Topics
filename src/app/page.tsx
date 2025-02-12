@@ -17,6 +17,7 @@ import ProgrssBar from "@/components/ProgrssBar";
 import Rainbow from "@/components/Rainbow";
 import { Stopwatch } from "@/components/stopwatch";
 import Tab from "@/components/Tab";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import Timer from "@/components/timer";
 import Todo from "@/components/Todo";
 import Togglemode from "@/components/toggle-mode";
@@ -30,7 +31,9 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import { ThemeContext } from "@/context/ThemeContext";
 import { title } from "process";
+import { useState } from "react";
 
 const content = [
   {
@@ -140,14 +143,18 @@ const content = [
 ];
 
 export default function Home() {
+  const [theme, setTheme] = useState("light");
   return (
-    <main className=" w-full h-screen flex flex-col items-center justify-start gap-y-12 p-20 bg-lime-200/60  text-3xl font-medium tracking-tight">
+    <ThemeContext.Provider value={{theme, setTheme}}>
+      
+    <main className={` w-full h-screen flex flex-col items-center justify-start gap-y-12 p-20   text-3xl font-medium tracking-tight ${theme === "light"?"bg-lime-200/60":"bg-slate-600/60"}`}>
       <h1>WELCOME</h1>
+      <ThemeSwitcher/>
       <div className=" w-full flex flex-wrap items-center justify-center gap-4 ">
         {content.map((item, index) => (
           <Drawer key={index}>
             <div className=" w-max flex items-center justify-between">
-              <DrawerTrigger className=" bg-gray-500 p-2 rounded-lg text-black w-max ">
+              <DrawerTrigger className={` ${theme==="light"?"bg-gray-500":" bg-sky-200"}  p-2 rounded-lg text-black w-max `}>
                 {item.title}
               </DrawerTrigger>
             </div>
@@ -168,5 +175,7 @@ export default function Home() {
         ))}
       </div>
     </main>
+    
+    </ThemeContext.Provider>
   );
 }
