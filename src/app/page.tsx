@@ -13,6 +13,7 @@ import File from "@/components/File";
 import { HookCounter } from "@/components/Hook-Counter";
 import InputAction from "@/components/InputAction";
 import MortgageCalculator from "@/components/MortgageCalculator";
+import { MultistepForm } from "@/components/MultiForm";
 import ProgrssBar from "@/components/ProgrssBar";
 import Rainbow from "@/components/Rainbow";
 import { Stopwatch } from "@/components/stopwatch";
@@ -110,72 +111,85 @@ const content = [
   {
     title: "API",
     description: "API Fetch Pagination",
-    component: <Fetchme/>
+    component: <Fetchme />,
   },
   {
     title: "Timer",
     description: "Timer",
-    component: <Timer/>
+    component: <Timer />,
   },
   {
     title: "Stopwatch",
     description: "Stop Watch",
-    component: <Stopwatch/>
+    component: <Stopwatch />,
   },
   {
     title: "Aritra",
     description: "Aritra",
-    component: <Aritra/>
+    component: <Aritra />,
   },
   {
     title: "Toggle",
     description: "Toggle also stored in localstorage",
-    component:<Togglemode/>
-  },{
+    component: <Togglemode />,
+  },
+  {
     title: "Counter",
     description: "Counter by hooks",
-    component:<HookCounter/>
-  },{
-    title:"Debouncing",
-    description:"method of debouncing",
-    component:<Debouncing/>
-  }
+    component: <HookCounter />,
+  },
+  {
+    title: "Debouncing",
+    description: "method of debouncing",
+    component: <Debouncing />,
+  },
+  {
+    title: "Multi Step Form",
+    description: "multi step form",
+    component: <MultistepForm />,
+  },
 ];
 
 export default function Home() {
   const [theme, setTheme] = useState("light");
   return (
-    <ThemeContext.Provider value={{theme, setTheme}}>
-      
-    <main className={` w-full h-screen flex flex-col items-center justify-start gap-y-12 p-20   text-3xl font-medium tracking-tight ${theme === "light"?"bg-lime-200/60":"bg-slate-600/60"}`}>
-      <h1>WELCOME</h1>
-      <ThemeSwitcher/>
-      <div className=" w-full flex flex-wrap items-center justify-center gap-4 ">
-        {content.map((item, index) => (
-          <Drawer key={index}>
-            <div className=" w-max flex items-center justify-between">
-              <DrawerTrigger className={` ${theme==="light"?"bg-gray-500":" bg-sky-200"}  p-2 rounded-lg text-black w-max `}>
-                {item.title}
-              </DrawerTrigger>
-            </div>
-            <DrawerContent>
-              <DrawerHeader>
-                <DrawerTitle>{item.title}</DrawerTitle>
-                <DrawerDescription>{item.description}</DrawerDescription>
-                {/* <MortgageCalculator /> */}
-                {item.component}
-              </DrawerHeader>
-              <DrawerFooter>
-                <DrawerClose>
-                  <button>Cancel</button>
-                </DrawerClose>
-              </DrawerFooter>
-            </DrawerContent>
-          </Drawer>
-        ))}
-      </div>
-    </main>
-    
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+      <main
+        className={` w-full h-screen flex flex-col items-center justify-start gap-y-12 p-20   text-3xl font-medium tracking-tight ${
+          theme === "light" ? "bg-lime-200/60" : "bg-slate-600/60"
+        }`}
+      >
+        <h1>WELCOME</h1>
+        <ThemeSwitcher />
+        <div className=" w-full flex flex-wrap items-center justify-center gap-4 ">
+          {content.map((item, index) => (
+            <Drawer key={index}>
+              <div className=" w-max flex items-center justify-between">
+                <DrawerTrigger
+                  className={` ${
+                    theme === "light" ? "bg-gray-500" : " bg-sky-200"
+                  }  p-2 rounded-lg text-black w-max `}
+                >
+                  {item.title}
+                </DrawerTrigger>
+              </div>
+              <DrawerContent>
+                <DrawerHeader>
+                  <DrawerTitle>{item.title}</DrawerTitle>
+                  <DrawerDescription>{item.description}</DrawerDescription>
+                  {/* <MortgageCalculator /> */}
+                  {item.component}
+                </DrawerHeader>
+                <DrawerFooter>
+                  <DrawerClose>
+                    <button>Cancel</button>
+                  </DrawerClose>
+                </DrawerFooter>
+              </DrawerContent>
+            </Drawer>
+          ))}
+        </div>
+      </main>
     </ThemeContext.Provider>
   );
 }
