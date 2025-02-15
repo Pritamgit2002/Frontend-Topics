@@ -32,6 +32,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
+import ValidationForm from "@/components/validation-form";
 import { ThemeContext } from "@/context/ThemeContext";
 import { title } from "process";
 import { useState } from "react";
@@ -147,6 +148,11 @@ const content = [
     title: "Multi Step Form",
     description: "multi step form",
     component: <MultistepForm />,
+  },
+  {
+    title: "Validation Form",
+    description: "validation form",
+    component: <ValidationForm />,
   },
 ];
 
