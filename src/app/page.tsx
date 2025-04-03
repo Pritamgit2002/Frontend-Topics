@@ -14,6 +14,7 @@ import { HookCounter } from "@/components/Hook-Counter";
 import InputAction from "@/components/InputAction";
 import MortgageCalculator from "@/components/MortgageCalculator";
 import { MultistepForm } from "@/components/MultiForm";
+import { OtpForm } from "@/components/otp-form";
 import ProgrssBar from "@/components/ProgrssBar";
 import Rainbow from "@/components/Rainbow";
 import { Stopwatch } from "@/components/stopwatch";
@@ -34,9 +35,7 @@ import {
 } from "@/components/ui/drawer";
 import ValidationForm from "@/components/validation-form";
 import { ThemeContext } from "@/context/ThemeContext";
-import { title } from "process";
 import { useState } from "react";
-
 const content = [
   {
     title: "Mortgage Calculator",
@@ -82,7 +81,6 @@ const content = [
     title: "Accordian",
     description: "Accordian",
     component: <Accordian defaultOpenIndex={1} />,
-    //component: <Accordian />,
   },
   {
     title: "Digital Clock",
@@ -153,6 +151,11 @@ const content = [
     title: "Validation Form",
     description: "validation form",
     component: <ValidationForm />,
+  },
+  {
+    title: "OTP Form",
+    description: "OTP Form",
+    component: <OtpForm />,
   },
 ];
 
