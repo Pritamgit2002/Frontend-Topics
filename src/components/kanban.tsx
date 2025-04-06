@@ -90,7 +90,7 @@ export default function KanbanBoard() {
         ))}
       </div>
       <div className="flex flex-col gap-4 p-4 overflow-x-auto bg-gray-200 rounded-lg">
-        <span className=" text-2xl font-semibold underline">Only View</span>
+        <span className=" text-2xl font-semibold underline">View Only</span>
         <div className=" w-max flex items-center justify-center gap-4">
           {columns.map((column, colIdx) => (
             <div

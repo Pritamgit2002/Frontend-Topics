@@ -8,6 +8,7 @@ import Carousal from "@/components/Carousal";
 import { ConditionDropdown } from "@/components/ConditionDropdown";
 import Debouncing from "@/components/debouncing";
 import DigitalClock from "@/components/Digital-clock";
+import DraggableBox from "@/components/draggable-box";
 import { Dropdown } from "@/components/Dropdown";
 import { Fetchme } from "@/components/fetchme";
 import File from "@/components/File";
@@ -168,6 +169,11 @@ const content = [
     title: "Kanban",
     description: "Kanban Board",
     component: <KanbanBoard />,
+  },
+  {
+    title: "Draggable",
+    description: "Movable Box",
+    component: <DraggableBox />,
   },
 ];
 
