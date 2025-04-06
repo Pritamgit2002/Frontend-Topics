@@ -1,6 +1,7 @@
 "use client";
 import Accordian from "@/components/Accordian";
 import Datafetching from "@/components/Api-fetch-pagination";
+import { ApiTodo } from "@/components/api-todo";
 import { Aritra } from "@/components/Aritra";
 import BasicForm from "@/components/Basic-form";
 import Carousal from "@/components/Carousal";
@@ -12,6 +13,7 @@ import { Fetchme } from "@/components/fetchme";
 import File from "@/components/File";
 import { HookCounter } from "@/components/Hook-Counter";
 import InputAction from "@/components/InputAction";
+import KanbanBoard from "@/components/kanban";
 import MortgageCalculator from "@/components/MortgageCalculator";
 import { MultistepForm } from "@/components/MultiForm";
 import { OtpForm } from "@/components/otp-form";
@@ -156,6 +158,16 @@ const content = [
     title: "OTP Form",
     description: "OTP Form",
     component: <OtpForm />,
+  },
+  {
+    title: "Api Todo",
+    description: "Api Todo",
+    component: <ApiTodo />,
+  },
+  {
+    title: "Kanban",
+    description: "Kanban Board",
+    component: <KanbanBoard />,
   },
 ];
 
