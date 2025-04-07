@@ -47,7 +47,9 @@ export const OtpForm = () => {
             maxLength={1}
             className="w-12 h-12 rounded-md border-2 border-gray-400 text-center text-xl font-semibold"
             value={inputArr[index]}
-            ref={(input) => (inputRef.current[index] = input)}
+            ref={(input) => {
+              inputRef.current[index] = input;
+            }}
             onChange={(e) => handleChange(e.target.value, index)}
             onKeyDown={(e) => handleKeyDown(e, index)}
           />

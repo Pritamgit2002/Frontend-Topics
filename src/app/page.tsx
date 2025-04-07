@@ -12,6 +12,7 @@ import DraggableBox from "@/components/draggable-box";
 import { Dropdown } from "@/components/Dropdown";
 import { Fetchme } from "@/components/fetchme";
 import File from "@/components/File";
+import { FileCheckBox } from "@/components/file-checkbox";
 import { HookCounter } from "@/components/Hook-Counter";
 import InputAction from "@/components/InputAction";
 import KanbanBoard from "@/components/kanban";
@@ -38,6 +39,7 @@ import {
 } from "@/components/ui/drawer";
 import ValidationForm from "@/components/validation-form";
 import { ThemeContext } from "@/context/ThemeContext";
+import { title } from "process";
 import { useState } from "react";
 const content = [
   {
@@ -174,6 +176,11 @@ const content = [
     title: "Draggable",
     description: "Movable Box",
     component: <DraggableBox />,
+  },
+  {
+    title: "File CheckBox",
+    description: "File CheckBox",
+    component: <FileCheckBox />,
   },
 ];
 
