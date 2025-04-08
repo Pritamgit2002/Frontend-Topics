@@ -19,6 +19,7 @@ import KanbanBoard from "@/components/kanban";
 import MortgageCalculator from "@/components/MortgageCalculator";
 import { MultistepForm } from "@/components/MultiForm";
 import { OtpForm } from "@/components/otp-form";
+import { Password } from "@/components/password";
 import ProgrssBar from "@/components/ProgrssBar";
 import Rainbow from "@/components/Rainbow";
 import { Stopwatch } from "@/components/stopwatch";
@@ -181,6 +182,11 @@ const content = [
     title: "File CheckBox",
     description: "File CheckBox",
     component: <FileCheckBox />,
+  },
+  {
+    title: "Password",
+    description: "Password",
+    component: <Password />,
   },
 ];
 
